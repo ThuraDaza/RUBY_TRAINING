@@ -1,0 +1,7 @@
+<h1 class = "text-center">Welcome to this page<h1>
+
+<div class = "text-center">
+  <%= form_with url: "/logout", method: :post do |form| %>
+    <%= form.submit "Sign Out", class:"btn btn-primary" %>
+  <% end %>
+</div>
