@@ -1,0 +1,12 @@
+<div class = "container w-50">
+  <h1 class="text-center">Age Calculator</h1>
+  <%= form_tag('/age_calculator', :method => "post") do %>
+    <div class = "text-center form-group">
+      <label>Enter Your Birth Date</label>
+      <%= date_field_tag :'born_on', nil, class:"form-control" %>
+    </div>
+    <div class = "submit text-center">
+      <%= submit_tag "Calculate Age", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
