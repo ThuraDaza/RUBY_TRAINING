@@ -303,3 +303,111 @@ Processing by AgeCalculatorController#age_result as HTML
 Completed 200 OK in 137ms (Views: 128.7ms | ActiveRecord: 0.0ms | Allocations: 15936)
 
 
+Started GET "/" for ::1 at 2021-12-21 09:51:23 +0630
+Started GET "/age_calculator" for ::1 at 2021-12-21 09:51:23 +0630
+Processing by Rails::WelcomeController#index as HTML
+Processing by AgeCalculatorController#age_form as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering age_calculator/age_form.html.erb within layouts/application
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 175.2ms | Allocations: 1414)
+Completed 200 OK in 466ms (Views: 269.2ms | ActiveRecord: 0.0ms | Allocations: 6394)
+
+
+  Rendered age_calculator/age_form.html.erb within layouts/application (Duration: 125.9ms | Allocations: 829)
+[Webpacker] Compiling...
+Started GET "/age_calculator" for ::1 at 2021-12-21 09:52:01 +0630
+Processing by AgeCalculatorController#age_form as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering age_calculator/age_form.html.erb within layouts/application
+  Rendered age_calculator/age_form.html.erb within layouts/application (Duration: 1.5ms | Allocations: 369)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 7fcd5a1c111d401cfe93
+Version: webpack 4.46.0
+Time: 23561ms
+Built at: 12/21/2021 9:53:01 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-cee4573637cee2e0d262.js    605 KiB  application  [emitted] [immutable]  application
+js/application-cee4573637cee2e0d262.js.map    708 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-cee4573637cee2e0d262.js js/application-cee4573637cee2e0d262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 512 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./node_modules/bootstrap/dist/js/bootstrap.esm.js
+Module not found: Error: Can't resolve '@popperjs/core' in 'C:\Users\thura\Desktop\RubyTuto\RUBY_TRAINING\tutorials\tutorial_03\node_modules\bootstrap\dist\js'
+ @ ./node_modules/bootstrap/dist/js/bootstrap.esm.js 60:0-41 2356:17-23 2375:21-40 4029:15-21 4164:23-42
+ @ ./app/javascript/packs/application.js
+
+[Webpacker] Compilation failed:
+Hash: 7fcd5a1c111d401cfe93
+Version: webpack 4.46.0
+Time: 23564ms
+Built at: 12/21/2021 9:53:01 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-cee4573637cee2e0d262.js    605 KiB  application  [emitted] [immutable]  application
+js/application-cee4573637cee2e0d262.js.map    708 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-cee4573637cee2e0d262.js js/application-cee4573637cee2e0d262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 512 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./node_modules/bootstrap/dist/js/bootstrap.esm.js
+Module not found: Error: Can't resolve '@popperjs/core' in 'C:\Users\thura\Desktop\RubyTuto\RUBY_TRAINING\tutorials\tutorial_03\node_modules\bootstrap\dist\js'
+ @ ./node_modules/bootstrap/dist/js/bootstrap.esm.js 60:0-41 2356:17-23 2375:21-40 4029:15-21 4164:23-42
+ @ ./app/javascript/packs/application.js
+
+  Rendered layout layouts/application.html.erb (Duration: 88126.7ms | Allocations: 126509)
+Completed 200 OK in 88274ms (Views: 88247.8ms | ActiveRecord: 0.0ms | Allocations: 129553)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 62359.6ms | Allocations: 15723)
+Completed 200 OK in 62421ms (Views: 62416.6ms | ActiveRecord: 0.0ms | Allocations: 17180)
+
+
+Started POST "/calculate_age" for ::1 at 2021-12-21 09:53:35 +0630
+Processing by AgeCalculatorController#calculate_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "born_on"=>"2021-12-03", "commit"=>"Calculate Age"}
+Redirected to http://localhost:3000/age_result?passed_parameter%5B%5D=0&passed_parameter%5B%5D=0&passed_parameter%5B%5D=18
+Completed 302 Found in 86ms (ActiveRecord: 0.0ms | Allocations: 478)
+
+
+Started GET "/age_result?passed_parameter%5B%5D=0&passed_parameter%5B%5D=0&passed_parameter%5B%5D=18" for ::1 at 2021-12-21 09:53:35 +0630
+Processing by AgeCalculatorController#age_result as HTML
+  Parameters: {"passed_parameter"=>["0", "0", "18"]}
+  Rendering layout layouts/application.html.erb
+  Rendering age_calculator/age_result.erb within layouts/application
+  Rendered age_calculator/age_result.erb within layouts/application (Duration: 9.9ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.9ms | Allocations: 14943)
+Completed 200 OK in 113ms (Views: 109.5ms | ActiveRecord: 0.0ms | Allocations: 15601)
+
+
+Started GET "/age_result?passed_parameter%5B%5D=0&passed_parameter%5B%5D=0&passed_parameter%5B%5D=18" for ::1 at 2021-12-21 09:54:54 +0630
+Processing by AgeCalculatorController#age_result as HTML
+  Parameters: {"passed_parameter"=>["0", "0", "18"]}
+  Rendering layout layouts/application.html.erb
+  Rendering age_calculator/age_result.erb within layouts/application
+  Rendered age_calculator/age_result.erb within layouts/application (Duration: 0.3ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.7ms | Allocations: 14693)
+Completed 200 OK in 156ms (Views: 153.1ms | ActiveRecord: 0.0ms | Allocations: 15348)
+
+
+Started GET "/" for ::1 at 2021-12-21 09:55:56 +0630
+Processing by AgeCalculatorController#age_form as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering age_calculator/age_form.html.erb within layouts/application
+  Rendered age_calculator/age_form.html.erb within layouts/application (Duration: 1.0ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.4ms | Allocations: 14806)
+Completed 200 OK in 101ms (Views: 99.3ms | ActiveRecord: 0.0ms | Allocations: 15441)
+
+

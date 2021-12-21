@@ -1,14 +1,16 @@
 class AgeCalculatorController < ApplicationController
 
-  def age_form
+  def calculate_age
     puts params[:born_on]
 
     if params.has_key?(:born_on) 
       @date_of_birth = Date.parse(params[:born_on])
+
+      # age calculation
       years = ((Time.zone.now - @date_of_birth.to_time) / 1.year.seconds).floor
 
+      # for age less than 1 year
       if years <= 0
-
         daysDiff = (Date.today.to_date - @date_of_birth.to_date).to_i
         months = (daysDiff/30).floor
         days = daysDiff-(months*30)
