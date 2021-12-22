@@ -1,0 +1,31 @@
+<div class="container w-500">
+  <h1>Member's specific data</h1>
+  <table class = "table">
+    <tr>
+      <th scope="row">ID</th>
+      <td><%= @member.id %></th>
+    </tr>
+    <tr>
+      <th scope="row">Name</th>
+      <td><%= @member.user_name %></th>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><%= @member.description %></th>
+    </tr>
+    <tr>
+      <th scope="row">Public_flag</th>
+      <td><%= @member.public_flag %></th>
+    </tr>
+    <tr>
+      <th scope="row">Created_at</th>
+      <td><%= @member.created_at %></th>
+    </tr>
+    <tr>
+      <th scope="row">Updated_at</th>
+      <td><%= @member.updated_at %></th>
+    </tr>
+  </table>
+  <%= link_to '<button type="button" class="btn btn-outline-success">Back</button>'.html_safe, posts_path %>
+
+</div>

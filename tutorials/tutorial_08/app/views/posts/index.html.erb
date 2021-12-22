@@ -1,0 +1,30 @@
+<div class="container w-500">
+  <h1>OJT Batch (1)</h1>
+  <p>The followings are list of people who are joining in OJT batch (1).</p>
+  <p>Create new member? <%= link_to 'Create', new_post_path %>   </p>
+  <table class = "table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% @members.each do |member| %>
+        <tr>
+          <th scope="row"><%= member.id %></th>
+          <td><%= member.user_name %></td>
+          <td><%= link_to '<button type="button" class="btn btn-outline-success">Show</button>'.html_safe, post_path(member) %></td>
+          <td><%= link_to '<button type="button" class="btn btn-outline-warning">Edit</button>'.html_safe, edit_post_path(member) %></td>
+          <td><%= button_to "Delete", post_path(member), method: :delete, data: { turbolinks: false, confirm: "Are you sure?" }, class: "btn btn-outline-danger" %></td>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>
+
