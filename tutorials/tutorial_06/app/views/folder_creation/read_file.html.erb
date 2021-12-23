@@ -1,0 +1,16 @@
+<div class = "container w-300">
+  <h1>File Reader</h1>
+  <div class = "container mt-3 w-300">
+    <%= form_tag "/folder_creation", :multipart => true do %>
+      <div class="mb-3 mt-3">
+        <label for = "file" class = "form-label">Upload text File</label> 
+        <%= file_field_tag "file", accept: "image/*", class: "form-control" %><br>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for = "file_path" class = "form-label">Enter folder name:</label> 
+        <%= text_field_tag "file_path", nil, class: "form-control" %>
+      </div>
+      <%= submit_tag "Submit", class: "btn btn-outline-success mt-3" %>
+    <% end %>
+  </div>
+</div>
