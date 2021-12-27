@@ -1,0 +1,650 @@
+Started GET "/" for ::1 at 2021-12-27 13:26:04 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 171.8ms | Allocations: 518)
+Completed 200 OK in 399ms (Views: 254.4ms | ActiveRecord: 0.0ms | Allocations: 4458)
+
+
+Started GET "/" for ::1 at 2021-12-27 13:26:11 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 224)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 946)
+
+
+Started GET "/" for ::1 at 2021-12-27 13:30:18 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 229)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 953)
+
+
+Started GET "/" for ::1 at 2021-12-27 13:30:20 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 46)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 416)
+
+
+Started GET "/qr_generator/build_qr" for ::1 at 2021-12-27 13:30:53 +0630
+  
+ActionController::RoutingError (No route matches [GET] "/qr_generator/build_qr"):
+  
+Started GET "/qr_generator" for ::1 at 2021-12-27 13:31:34 +0630
+  
+ActionController::RoutingError (No route matches [GET] "/qr_generator"):
+  
+Started GET "/build_qr" for ::1 at 2021-12-27 13:31:46 +0630
+  
+ActionController::RoutingError (uninitialized constant PagesController):
+  
+Started GET "/qr_generator" for ::1 at 2021-12-27 13:32:14 +0630
+  
+ActionController::RoutingError (No route matches [GET] "/qr_generator"):
+  
+Started GET "/build_qr" for ::1 at 2021-12-27 13:32:31 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 12.7ms | Allocations: 388)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 90815d1a75262d6990d5
+Version: webpack 4.46.0
+Time: 9339ms
+Built at: 12/27/2021 1:32:55 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-cee4573637cee2e0d262.js    605 KiB  application  [emitted] [immutable]  application
+js/application-cee4573637cee2e0d262.js.map    708 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-cee4573637cee2e0d262.js js/application-cee4573637cee2e0d262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 512 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+ERROR in ./node_modules/bootstrap/dist/js/bootstrap.esm.js
+Module not found: Error: Can't resolve '@popperjs/core' in 'C:\Users\thura\Desktop\RubyTuto\RUBY_TRAINING\tutorials\tutorial_07\node_modules\bootstrap\dist\js'
+ @ ./node_modules/bootstrap/dist/js/bootstrap.esm.js 60:0-41 2356:17-23 2375:21-40 4029:15-21 4164:23-42
+ @ ./app/javascript/packs/application.js
+
+  Rendered layout layouts/application.html.erb (Duration: 24781.0ms | Allocations: 107761)
+Completed 200 OK in 24791ms (Views: 24788.1ms | ActiveRecord: 0.0ms | Allocations: 109008)
+
+
+Started GET "/qr_code_download?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 13:33:14 +0630
+Processing by QrGeneratorController#qr_code_download as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2068)
+
+
+  
+NameError (uninitialized constant QrGeneratorController::RQRCode):
+  
+app/controllers/qr_generator_controller.rb:6:in `qr_code_download'
+Started GET "/" for ::1 at 2021-12-27 13:36:26 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 355)
+Completed 200 OK in 28ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 2839)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:36:32 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.2ms | Allocations: 388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 275.4ms | Allocations: 27292)
+Completed 200 OK in 287ms (Views: 283.7ms | ActiveRecord: 0.0ms | Allocations: 28595)
+
+
+Started GET "/qr_code_download?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 13:36:38 +0630
+Processing by QrGeneratorController#qr_code_download as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 27)
+Sent data  (48.1ms)
+Completed 200 OK in 234ms (Views: 47.9ms | ActiveRecord: 0.0ms | Allocations: 52062)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:40:44 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 21.7ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 1560)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>QR code generator</h1>
+
+<%= form_tag :qr_code_download, method: :get do |f| %>
+  <div class="mb-3">
+    <%= label_tag 'Text or URL', nil, class: "form-label" %>
+    <%= text_field_tag :content, nil, class: "form-control" required: true %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Generate QR code', class: "btn btn-ouline-success" %>
+  </div>
+<% end %>
+):
+1:    <h1>QR code generator</h1>
+2:    
+3:    <%= form_tag :qr_code_download, method: :get do |f| %>
+4:      <div class="mb-3">
+5:        <%= label_tag 'Text or URL', nil, class: "form-label" %>
+6:        <%= text_field_tag :content, nil, class: "form-control" required: true %>
+7:      </div>
+8:    
+9:      <div class="actions">
+10:        <%= submit_tag 'Generate QR code', class: "btn btn-ouline-success" %>
+11:      </div>
+12:    <% end %>
+  
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/build_qr" for ::1 at 2021-12-27 13:41:02 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1169)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 1256)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 2497)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>QR code generator</h1>
+
+<%= form_tag :qr_code_download, method: :get do |f| %>
+  <div class="mb-3">
+    <%= label_tag 'Text or URL', nil, class: "form-label" %>
+    <%= text_field_tag :content, class: "form-control" required: true %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Generate QR code', class: "btn btn-ouline-success" %>
+  </div>
+<% end %>
+):
+1:    <h1>QR code generator</h1>
+2:    
+3:    <%= form_tag :qr_code_download, method: :get do |f| %>
+4:      <div class="mb-3">
+5:        <%= label_tag 'Text or URL', nil, class: "form-label" %>
+6:        <%= text_field_tag :content, class: "form-control" required: true %>
+7:      </div>
+8:    
+9:      <div class="actions">
+10:        <%= submit_tag 'Generate QR code', class: "btn btn-ouline-success" %>
+11:      </div>
+12:    <% end %>
+  
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/build_qr" for ::1 at 2021-12-27 13:41:04 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1158)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1246)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1712)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>QR code generator</h1>
+
+<%= form_tag :qr_code_download, method: :get do |f| %>
+  <div class="mb-3">
+    <%= label_tag 'Text or URL', nil, class: "form-label" %>
+    <%= text_field_tag :content, class: "form-control" required: true %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Generate QR code', class: "btn btn-ouline-success" %>
+  </div>
+<% end %>
+):
+1:    <h1>QR code generator</h1>
+2:    
+3:    <%= form_tag :qr_code_download, method: :get do |f| %>
+4:      <div class="mb-3">
+5:        <%= label_tag 'Text or URL', nil, class: "form-label" %>
+6:        <%= text_field_tag :content, class: "form-control" required: true %>
+7:      </div>
+8:    
+9:      <div class="actions">
+10:        <%= submit_tag 'Generate QR code', class: "btn btn-ouline-success" %>
+11:      </div>
+12:    <% end %>
+  
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/qr_generator/build_qr.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/build_qr" for ::1 at 2021-12-27 13:41:21 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 20.9ms | Allocations: 386)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.0ms | Allocations: 15258)
+Completed 200 OK in 106ms (Views: 102.7ms | ActiveRecord: 0.0ms | Allocations: 16513)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:41:42 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 53.3ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 133.6ms | Allocations: 15198)
+Completed 200 OK in 144ms (Views: 140.6ms | ActiveRecord: 0.0ms | Allocations: 16453)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:42:00 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 19.5ms | Allocations: 368)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.3ms | Allocations: 15216)
+Completed 200 OK in 105ms (Views: 102.2ms | ActiveRecord: 0.0ms | Allocations: 16459)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:42:12 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 101.9ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 103.3ms | Allocations: 1370)
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms | Allocations: 2593)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 0..2)):
+     7:   </div>
+     8: 
+     9:   <div class="actions">
+    10:     <%= submit_tag 'Generate QR code', nil, class: "btn btn-ouline-success" %>
+    11:   </div>
+    12: <% end %>
+  
+app/views/qr_generator/build_qr.html.erb:10
+app/views/qr_generator/build_qr.html.erb:3
+Started GET "/build_qr" for ::1 at 2021-12-27 13:43:29 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 19.1ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 91.9ms | Allocations: 15233)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 0.0ms | Allocations: 16484)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:45:19 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.0ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3536.2ms | Allocations: 88451)
+Completed 200 OK in 3564ms (Views: 3562.8ms | ActiveRecord: 0.0ms | Allocations: 88943)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 13:51:06 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 0.8ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 119.7ms | Allocations: 15047)
+Completed 200 OK in 124ms (Views: 122.3ms | Allocations: 15541)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:19:46 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 0.9ms | Allocations: 197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 111.3ms | Allocations: 15031)
+Completed 200 OK in 116ms (Views: 114.4ms | Allocations: 15669)
+
+
+Started GET "/qr_code_download?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 14:20:16 +0630
+Processing by QrGeneratorController#qr_code_download as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering text template
+  Rendered text template (Duration: 0.3ms | Allocations: 26)
+Sent data  (35.5ms)
+Completed 200 OK in 194ms (Views: 35.0ms | Allocations: 51831)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:20:44 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 0.6ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 91.3ms | Allocations: 15041)
+Completed 200 OK in 94ms (Views: 93.4ms | Allocations: 15535)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:32:44 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 71.6ms | Allocations: 389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.7ms | Allocations: 15399)
+Completed 200 OK in 202ms (Views: 194.6ms | Allocations: 16656)
+
+
+Started GET "/qr_code_download?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 14:32:51 +0630
+Processing by QrGeneratorController#qr_code_download as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+Redirected to http://localhost:3000/show_qr
+Completed 302 Found in 274ms (Allocations: 49803)
+
+
+  
+ActionDispatch::Cookies::CookieOverflow (ActionDispatch::Cookies::CookieOverflow):
+  
+actionpack (6.1.4.4) lib/action_dispatch/middleware/cookies.rb:678:in `commit'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/cookies.rb:496:in `[]='
+actionpack (6.1.4.4) lib/action_dispatch/middleware/session/cookie_store.rb:110:in `set_cookie'
+rack (2.2.3) lib/rack/session/abstract/id.rb:403:in `commit_session'
+rack (2.2.3) lib/rack/session/abstract/id.rb:268:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.4) lib/action_dispatch/middleware/host_authorization.rb:119:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.4) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-12-27 14:40:25 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 44.0ms | Allocations: 223)
+Completed 200 OK in 246ms (Views: 46.5ms | Allocations: 997)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:40:27 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 78.1ms | Allocations: 387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 169.4ms | Allocations: 15428)
+Completed 200 OK in 184ms (Views: 179.3ms | Allocations: 16680)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:40:28 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 0.8ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 101.9ms | Allocations: 15046)
+Completed 200 OK in 107ms (Views: 105.2ms | Allocations: 15538)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 14:40:32 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 35.8ms | Allocations: 2023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 130.5ms | Allocations: 16876)
+Completed 200 OK in 291ms (Views: 132.2ms | Allocations: 67031)
+
+
+Started GET "/" for ::1 at 2021-12-27 14:54:46 +0630
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 228)
+Completed 200 OK in 18ms (Views: 9.2ms | Allocations: 1001)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:54:49 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.5ms | Allocations: 381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 186.2ms | Allocations: 15450)
+Completed 200 OK in 201ms (Views: 197.0ms | Allocations: 16699)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 14:54:49 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.2ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 175.0ms | Allocations: 15075)
+Completed 200 OK in 243ms (Views: 176.6ms | Allocations: 15567)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 14:54:54 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 1304.6ms | Allocations: 184671)
+  Rendered layout layouts/application.html.erb (Duration: 1305.9ms | Allocations: 184756)
+Completed 500 Internal Server Error in 1470ms (Allocations: 234888)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ChunkyPNG::Image:0x0000020b29a9db08>
+Did you mean?  to_yaml):
+    1: <h1>QR code for url</h1>
+    2: 
+    3: <img src="<%= @png.to_data_url %>" />
+    4: <%= button_to "Download QR", @png, method: :qr_code_download %>
+    5: 
+    6: <a href="<%= @png.to_data_url %>" download>
+    7:   thura
+  
+app/views/qr_generator/show_qr.html.erb:4
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 14:55:21 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 99.7ms | Allocations: 3909)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 183.0ms | Allocations: 18945)
+Completed 200 OK in 326ms (Views: 191.7ms | Allocations: 69721)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 14:57:43 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 108.5ms | Allocations: 3917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 229.0ms | Allocations: 18948)
+Completed 200 OK in 385ms (Views: 236.5ms | Allocations: 69725)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 15:00:33 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 72.5ms | Allocations: 3955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 170.6ms | Allocations: 18986)
+Completed 200 OK in 330ms (Views: 177.7ms | Allocations: 69762)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 15:00:36 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.3ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 88.2ms | Allocations: 15231)
+Completed 200 OK in 95ms (Views: 90.1ms | Allocations: 15865)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 15:00:43 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 58.8ms | Allocations: 3822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 157.5ms | Allocations: 18675)
+Completed 200 OK in 300ms (Views: 159.5ms | Allocations: 68695)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 15:05:28 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 124.1ms | Allocations: 3963)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4212.0ms | Allocations: 102186)
+Completed 200 OK in 4397ms (Views: 4219.7ms | Allocations: 152968)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 15:07:59 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 102.2ms | Allocations: 3959)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 195.5ms | Allocations: 19173)
+Completed 200 OK in 361ms (Views: 204.6ms | Allocations: 69949)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 15:08:22 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 64.9ms | Allocations: 3958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.7ms | Allocations: 19172)
+Completed 200 OK in 357ms (Views: 196.3ms | Allocations: 69948)
+
+
+Started GET "/show_qr?content=https%3A%2F%2Fdev.to%2Fcollimarco%2Fbuilding-a-qr-code-generator-with-ruby-on-rails-28ki&commit=Generate+QR+code" for ::1 at 2021-12-27 15:08:58 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"https://dev.to/collimarco/building-a-qr-code-generator-with-ruby-on-rails-28ki", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 58.0ms | Allocations: 3825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3033.1ms | Allocations: 113499)
+Completed 200 OK in 3176ms (Views: 3035.1ms | Allocations: 163519)
+
+
+Started GET "/build_qr" for ::1 at 2021-12-27 15:10:25 +0630
+Processing by QrGeneratorController#build_qr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/build_qr.html.erb within layouts/application
+  Rendered qr_generator/build_qr.html.erb within layouts/application (Duration: 1.5ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 15403)
+Completed 200 OK in 100ms (Views: 97.4ms | Allocations: 16006)
+
+
+Started GET "/show_qr?content=asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna&commit=Generate+QR+code" for ::1 at 2021-12-27 15:10:35 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 61.4ms | Allocations: 3822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.0ms | Allocations: 18856)
+Completed 200 OK in 271ms (Views: 158.1ms | Allocations: 53465)
+
+
+Started GET "/show_qr?content=asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna&commit=Generate+QR+code" for ::1 at 2021-12-27 15:13:59 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 65.6ms | Allocations: 3821)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 163.6ms | Allocations: 18856)
+Completed 200 OK in 272ms (Views: 165.2ms | Allocations: 53467)
+
+
+Started GET "/show_qr?content=asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna&commit=Generate+QR+code" for ::1 at 2021-12-27 15:20:01 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 63.8ms | Allocations: 3960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 172.7ms | Allocations: 19152)
+Completed 200 OK in 308ms (Views: 180.9ms | Allocations: 54526)
+
+
+Started GET "/show_qr?content=asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna&commit=Generate+QR+code" for ::1 at 2021-12-27 15:33:01 +0630
+Processing by QrGeneratorController#show_qr as HTML
+  Parameters: {"content"=>"asfagadognagnajgjgnawgnjdnjbnajnaknvdjbndanjdnkvna", "commit"=>"Generate QR code"}
+  Rendering layout layouts/application.html.erb
+  Rendering qr_generator/show_qr.html.erb within layouts/application
+  Rendered qr_generator/show_qr.html.erb within layouts/application (Duration: 101.4ms | Allocations: 3825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 192.3ms | Allocations: 18966)
+Completed 200 OK in 315ms (Views: 194.3ms | Allocations: 53578)
+
+
