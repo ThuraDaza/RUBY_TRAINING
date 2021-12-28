@@ -1,0 +1,14 @@
+Started GET "/" for ::1 at 2021-12-28 09:20:12 +0630
+Started GET "/" for ::1 at 2021-12-28 09:20:12 +0630
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 99.1ms | Allocations: 537)
+Completed 200 OK in 332ms (Views: 180.7ms | ActiveRecord: 0.0ms | Allocations: 4901)
+
+
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 60.1ms | Allocations: 584)
+Completed 200 OK in 324ms (Views: 179.2ms | ActiveRecord: 0.0ms | Allocations: 4996)
+
+
