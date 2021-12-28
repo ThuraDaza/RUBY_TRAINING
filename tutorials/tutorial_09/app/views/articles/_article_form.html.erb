@@ -1,0 +1,28 @@
+<%= form_with model: [ @user, @user.articles.build ] do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, "Title", class: "form-label" %><br>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :description, "Description", class: "form-label" %><br>
+      <%= form.text_field :description, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :public_flag, "Public Flag", class: "form-label" %>
+      <div class="form-check">
+        <%= form.label :public_flag, "Yes", class: "form-check-label" %>
+        <%= form.radio_button :public_flag, "true", class: "form-check-input" %>
+      </div>
+
+      <div class="form-check">
+        <%= form.label :public_flag, "No", class: "form-check-label" %>
+        <%= form.radio_button :public_flag, "false", class: "form-check-input" %>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit "Submit", class: "btn btn-outline-success" %>
+    </div>
+<% end %>
