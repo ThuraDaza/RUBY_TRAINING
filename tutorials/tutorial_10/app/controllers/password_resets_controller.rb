@@ -36,7 +36,7 @@ class PasswordResetsController < ApplicationController
       end
 
     else
-      render :edit, notice: "Passwords should be the same"
+      redirect_to password_reset_edit_url(token: params[:token] ), notice: "Password did not match"
     end
 
   end
