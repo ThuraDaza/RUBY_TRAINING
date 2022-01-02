@@ -1,0 +1,50 @@
+<%= form_with model: user do |form| %>
+    <div class="mb-3">
+      <%= form.label :name, "Name", class: "form-label" %><br>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :email, "Email", class: "form-label" %><br>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :password, "Password", class: "form-label" %><br>
+      <%= form.password_field :password, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :super_user_flag, "Super User Flag" %>
+      <div class="form-check">
+        <%= form.label :super_user_flag, "Yes", class: "form-check-label" %>
+        <%= form.radio_button :super_user_flag, "true", class: "form-check-input" %>
+      </div>
+
+      <div class="form-check">
+        <%= form.label :super_user_flag, "No", class: "form-check-label" %>
+        <%= form.radio_button :super_user_flag, "false", class: "form-check-input" %>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :phone, "Phone", class: "form-label" %><br>
+      <%= form.text_field :phone, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :address, "Address", class: "form-label" %><br>
+      <%= form.text_field :address, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :birthday, "Birthday", class: "form-label" %><br>
+      <%= form.date_field :birthday, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit "Submit", class: "btn btn-outline-success mr-50" %>
+      <%= link_to '<button type="button" class="btn btn-outline-warning">Cancel</button>'.html_safe, 
+          users_path %>
+    </div>
+  <% end %>

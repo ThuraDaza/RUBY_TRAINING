@@ -1,0 +1,49 @@
+<div class="container w-400">
+  <h1>Personal Details</h1>
+
+  <table class="table">
+    <tr>
+      <td>Name:</td>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><%= @user.password %></td>
+    </tr>
+    <tr>
+      <td>Super User Flag:</td>
+      <td><%= @user.super_user_flag %></td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td><%= @user.phone %></td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td><%= @user.address %></td>
+    </tr>
+    <tr>
+      <td>Birthday:</td>
+      <td><%= @user.birthday %></td>
+    </tr>
+    <tr>
+      <td><%= link_to "Home Page", users_path, class: "btn btn-outline-warning" %></td>
+      <td></td>
+    </tr>
+  </table> 
+
+  <%# create article %>
+  <h2>Create an Article:</h2>
+  <%= render 'articles/article_form' %> 
+
+  <%# show created articles %>
+  <% unless @user.articles.empty? %>
+    <h2>Articles</h2>
+    <%= render @user.articles %>
+  <% end %>
+</div>
+
