@@ -1,0 +1,15 @@
+<h1 class = "text-center">The Result</h1>
+
+<%# age over 1 year %>
+<%if @year>0 %>
+    <h2 class = "text-center">Your age is <%= @year %> years old.</h2>
+
+<%# age less than 1 year and 1 month %>
+<% else %>
+    <%if @month>0 %>
+        <h2 class = "text-center">Your age is <%= @month %> months.</h2>
+    <% else %>
+        <h2 class = "text-center">Your age is <%= @day %> days.</h2>
+    <%end%>
+    
+<%end%>
