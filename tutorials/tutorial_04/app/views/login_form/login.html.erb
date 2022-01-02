@@ -1,0 +1,15 @@
+<div class = "container w-50">
+  <h1>Login to go the welcome page.</h1>
+
+  <%= form_with url: "/login", method: :post do |form| %>
+    <div class = "form text-center form-group">
+      <label>Enter Email</label>
+      <%= form.email_field :email, class:"form-control" %>
+      <label>Enter Password</label>
+      <%= form.password_field :password, class:"form-control" %>
+    </div>
+    <div class = "text-center">
+      <%= form.submit "Sign In", class:"btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
