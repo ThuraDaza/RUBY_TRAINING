@@ -1,0 +1,10 @@
+<div class = "container">
+  <h1>File Reader</h1>
+  <div class = "mb-30">
+    <%= form_tag "/file_reader", :multipart => true do %>
+      <label for = "file" class = "form-label">Upload text File</label> 
+      <%= file_field_tag "file", accept: "text/plain" %><br>
+      <%= submit_tag "Submit", class: "btn btn-outline-success mt-30" %>
+    <% end %>
+  </div>
+</div>
