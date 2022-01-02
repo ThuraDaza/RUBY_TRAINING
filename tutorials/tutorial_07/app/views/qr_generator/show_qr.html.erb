@@ -1,0 +1,14 @@
+<div class="container w-400">
+  <h1>QR code for url</h1>
+
+  <div class="buttons">
+    <img src="<%= @png.to_data_url %>" /><br>
+    <a href="<%= @png.to_data_url %>" class="btn btn-outline-success" download>
+      Download QR
+    </a>
+    <a href="<%= build_qr_path %>" class="btn btn-outline-warning">
+      Back to Home
+    </a>
+  </div>
+
+</div>

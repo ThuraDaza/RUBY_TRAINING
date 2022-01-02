@@ -1,0 +1,14 @@
+<div class="container w-400">
+  <h1>QR code generator</h1>
+
+  <%= form_tag :show_qr, method: :get do |f| %>
+    <div class="mb-3">
+      <%= label_tag 'Text or URL', nil, class: "form-label" %>
+      <%= text_field_tag :content, nil, class: "form-control", required: true %>
+    </div>
+
+    <div class="mb-3">
+      <%= submit_tag 'Generate QR code',  class: "btn btn-outline-success" %>
+    </div>
+  <% end %>
+</div>
