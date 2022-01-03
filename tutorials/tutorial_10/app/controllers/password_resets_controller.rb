@@ -1,9 +1,11 @@
 class PasswordResetsController < ApplicationController
+  skip_before_action :authorized
+
   def new
   end
 
   def create
-    @user = User.find_by(email: params[:email])
+    @user = UserService.findByEmail(params[:email])
 
     if @user.present? 
       #send email
@@ -23,13 +25,13 @@ class PasswordResetsController < ApplicationController
 
   def update
     @user = User.find_signed!(params[:token], purpose: "password reset")
-    password = params.require(:user).permit(:password)
-    confirm_password = params.require(:user).permit(:password_confirmation)
+    password = params[:password]
+    confirm_password = params[:password_confirmation]
 
     # check password confirmation same with password
-    if password[:password] == confirm_password[:password_confirmation]
+    if password == confirm_password
       # update password 
-      if @user.update(password_params)
+      if UserService.updatePassword(@user, password)
         redirect_to root_path, notice: "Your password was reset successfully."
       else
         render :edit
@@ -41,8 +43,4 @@ class PasswordResetsController < ApplicationController
 
   end
 
-  private
-  def password_params
-    params.require(:user).permit(:password)
-  end
 end
