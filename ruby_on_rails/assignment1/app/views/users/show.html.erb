@@ -1,0 +1,76 @@
+<div class="container w-400">
+  <h1>Personal Details</h1>
+
+  <table class="table mb-50">
+    <tr>
+      <td>Name:</td>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><%= @user.password %></td>
+    </tr>
+    <tr>
+      <td>Super User Flag:</td>
+      <td><%= @user.super_user_flag %></td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td><%= @user.phone %></td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td><%= @user.address %></td>
+    </tr>
+    <tr>
+      <td>Birthday:</td>
+      <td><%= @user.birthday %></td>
+    </tr>
+  </table> 
+
+  <div class="d-flex justify-content-around mb-50">
+    <%= link_to '<button type="button" class="btn btn-outline-warning">Edit</button>'.html_safe, 
+            edit_user_path(@user) %>
+    <%= button_to "Delete", user_path(@user), 
+            method: :delete, data: { turbolinks: false, confirm: "Are you sure?" },
+            class: "btn btn-outline-danger" %>
+    <%= link_to "Home Page", users_path, class: "btn btn-outline-warning" %>
+  </div>
+
+  <%# create article %>
+  <h2>Upload CSV</h2>
+  <div class="mb-50">
+    <%= form_with url: import_path(@user), method: :post do |form| %>
+      <div class="mb-3">
+        <%= form.label :file, "Upload csv file", class: "form-label" %>
+        <%= form.file_field :file, class: "form-control" %>
+      </div>
+      <%= form.submit "Import CSV", class: "btn btn-outline-success" %>
+    <% end %>
+  </div>
+
+  <%# show created articles %>
+  <% unless @user.articles.empty? %>
+    <h2>Articles</h2>
+    <table class="table mb-50">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Public_flag</th>
+          <th scope="col" colspan="2">
+            <%= button_to "Download as CSV", export_path(@user, format: "csv"), class: "btn btn-outline-info" , method: :post  %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @user.articles %>
+      </tbody>
+    </table>
+  <% end %>
+</div>
