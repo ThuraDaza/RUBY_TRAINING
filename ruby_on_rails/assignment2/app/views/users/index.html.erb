@@ -1,0 +1,69 @@
+<div class="container w-400">
+  <h1>Welcome to our page</h1>
+
+  <div class="d-flex justify-content-between">
+    <p>Create New User? <%= link_to "Create New", new_user_path %></p>
+    <%= button_to "Log Out", sign_out_path, class: "btn btn-outline-success fr-0" , method: :post  %> 
+  </div>       
+
+  <%# search user %>
+  <div class="w-200">
+    <%= form_with url: users_path, method: :get do |form| %>
+      <div class="mb-3">
+        <%= form.label :name, "Name", class: "form-label" %><br>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :email, "Email", class: "form-label" %><br>
+        <%= form.text_field :email, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :super_user_flag, "Choose user type", class: "form-label" %><br>
+        <%= form.select :super_user_flag, options_for_select([['Select user type',""], ['Super User', true], ['Normal User', false]]), {}, {class: "form-select"} %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :phone, "Phone", class: "form-label" %><br>
+        <%= form.text_field :phone, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :address, "Address", class: "form-label" %><br>
+        <%= form.text_field :address, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :birthday, "Birthday", class: "form-label" %><br>
+        <%= form.date_field :birthday, class: "form-control" %>
+      </div>
+      <div class="mb-3">
+        <%= form.submit "Search", class: "btn btn-outline-warning" %>
+      </div>
+    <% end %>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <th scope="row"><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to '<button type="button" class="btn btn-outline-success">Details</button>'.html_safe, 
+          user_path(user) %></td>      
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+</div>
