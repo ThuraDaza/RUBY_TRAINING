@@ -1,0 +1,10 @@
+<%# prevent multiple data rendering %>
+$( ".add_post" ).unbind(); 
+
+$('.add_post').bind('ajax:success', function() {
+  <%# render newly added data  %>
+  $('.new_post').append("<%= j render 'posts/post_row', member: @member %>");
+
+  <%# reset form after save data  %>
+  $(".add_post").trigger("reset");
+});

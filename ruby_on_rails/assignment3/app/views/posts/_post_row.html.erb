@@ -1,0 +1,8 @@
+<tr>
+  <th scope="row"><%= member.user_name %></td>
+  <td><%= member.title %></td>
+  <td><%= member.description %></td>
+  <td><%= member.public_flag == true ? "Public" : "Private" %></td>
+  <td><%= member.created_at %></td>
+  <td><%= button_to "Delete", post_path(member), method: :delete, data: { turbolinks: false, confirm: "Are you sure?" }, remote: true, form_class: "delete_post", class: "btn btn-outline-danger" %></td>
+</tr>

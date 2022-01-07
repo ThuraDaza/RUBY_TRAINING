@@ -1,0 +1,27 @@
+<div class="container w-500">
+  <%= form_with model: member, local: false, class: 'add_post' do |form|%>
+    <div class="mb-3">
+      <%= form.label :Name, class: "form-label" %><br>
+      <%= form.text_field :user_name, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :Title, class: "form-label" %><br>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :Description, class: "form-label" %><br>
+      <%= form.text_area :description, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :public_flag, "Choose Privacy Type", class: "form-label" %><br>
+        <%= form.select :public_flag, options_for_select([['Privacy type',""], ['Public', true], ['Private', false]]), {}, {class: "form-select"} %>
+    </div>
+
+    <div>
+      <%= form.submit :Create, class: "btn btn-outline-success mr-50" %>
+    </div>
+  <% end %>
+</div>

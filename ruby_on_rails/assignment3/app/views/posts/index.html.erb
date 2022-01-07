@@ -1,0 +1,27 @@
+<div class="container w-500">
+  <h1>OJT Batch (1)</h1>
+  <p>The followings are list of people who are joining in OJT batch (1).</p>
+
+  <%= render "form", member: @member %>
+
+  <table class = "table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Privacy</th>
+        <th scope="col">Created at</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="new_post">
+
+      <% @members.each do |member| %>
+        <%= render "post_row", member: member %>
+      <% end %>
+
+    </tbody>
+  </table>
+</div>
+
