@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if @is_user_create
       redirect_to users_path
     else
-      redirect_to new_user_path
+      redirect_to new_user_path, notice: "User creation failed, validation error occurs!!"
     end
 
   end
