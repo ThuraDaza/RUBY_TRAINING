@@ -11,6 +11,13 @@ class ArticlesController < ApplicationController
 
   end
 
+  # create an article
+  def create
+    @user = UserService.getUserByID(params[:user_id])
+    @article = ArticleService.createArticle(@user, article_params)
+    redirect_to user_path(@user)
+  end
+
   # create articles using data from import csv file
   def import
     @user = UserService.getUserByID(params[:user_id])
