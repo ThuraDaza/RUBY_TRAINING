@@ -20,7 +20,7 @@ class PasswordResetsController < ApplicationController
 
     # for expire token 
     rescue ActiveSupport::MessageVerifier::InvalidSignature
-      redirect_to root_path, alert: "Your token has expired, Please try again!!!"
+      redirect_to root_path, notice: "Your token has expired, Please try again!!!"
   end
 
   def update

@@ -1,12 +1,12 @@
 <%= form_with model: user_article do |form| %>
     <div class="mb-3">
       <%= form.label :title, "Title", class: "form-label" %><br>
-      <%= form.text_field :title, class: "form-control" %>
+      <%= form.text_field :title, class: "form-control", required: true %>
     </div>
 
     <div class="mb-3">
       <%= form.label :description, "Description", class: "form-label" %><br>
-      <%= form.text_field :description, class: "form-control" %>
+      <%= form.text_field :description, class: "form-control", required: true %>
     </div>
 
     <div class="mb-3">
