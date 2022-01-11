@@ -3,5 +3,5 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
-  validates :public_flag, presence: true
+  validates :public_flag, inclusion: { in: [ true, false ] }
 end
