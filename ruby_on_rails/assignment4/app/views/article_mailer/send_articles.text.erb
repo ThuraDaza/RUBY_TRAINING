@@ -1,0 +1,5 @@
+Hello <%= @current_user.name %>
+
+<% @articles.each do |article| %>
+    <%= article.id %>, <%= article.title %>, <%= article.description %>, <%= article.public_flag == true ? "Public" : "Private"  %>
+<% end %>

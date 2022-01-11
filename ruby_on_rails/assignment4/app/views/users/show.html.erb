@@ -1,0 +1,38 @@
+<div class="container w-400">
+  <h1>User's Articles</h1>
+
+  <div class="d-flex justify-content-between mb-50">
+    <div>
+      <%= link_to "Users", users_path, class: "btn btn-outline-warning mr-50" %>
+      <td><%= link_to '<button type="button" class="btn btn-outline-success">Articles</button>'.html_safe, 
+          user_path(current_user) %></td>
+    </div>
+    <%= button_to "Log Out", sign_out_path, class: "btn btn-outline-success" , method: :post  %>        
+  </div>
+
+  <h2>Article Lists</h2>
+
+  <div class="d-flex justify-content-between mb-50">
+    <%= link_to '<button type="button" class="btn btn-outline-success">Create Articles</button>'.html_safe, 
+          new_article_path %>
+    <%= button_to "Send Articles", articles_send_email_path, class: "btn btn-outline-success" , method: :post %>  
+  </div>
+
+  <%# show created articles %>
+  <% unless @user.articles.empty? %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Privacy Type</th>
+          <th scope="col" colspan="2">Operation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @user.articles %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

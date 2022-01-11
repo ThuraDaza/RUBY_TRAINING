@@ -1,0 +1,23 @@
+<div class="container w-400">
+  <h1>Hello <%= @current_user.name %></h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Privacy Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.id %></td>
+          <td><%= article.title %></td>
+          <td><%= article.description %></td>
+          <td><%= article.public_flag == true ? "Public" : "Private"  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
