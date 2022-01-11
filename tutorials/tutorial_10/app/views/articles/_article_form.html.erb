@@ -1,0 +1,29 @@
+<%= form_with model: user_article, article: article do |form| %>
+    <div class="mb-3">
+      <%= form.label :title, "Title", class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div class="text-danger"><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :description, "Description", class: "form-label" %>
+      <%= form.text_field :description, class: "form-control" %>
+      <% article.errors.full_messages_for(:description).each do |message| %>
+        <div class="text-danger"><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :public_flag, "Choose Privacy Type", class: "form-label" %>
+        <%= form.select :public_flag, options_for_select([['Privacy type',""], ['Public', true], ['Private', false]]), {}, {class: "form-select"} %>
+        <% article.errors.full_messages_for(:public_flag).each do |message| %>
+          <div class="text-danger"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit "Submit", class: "btn btn-outline-success" %>
+    </div>
+<% end %>

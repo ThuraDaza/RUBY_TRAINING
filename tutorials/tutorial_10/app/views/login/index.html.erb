@@ -1,20 +1,21 @@
 <div class="container w-300">
   <h1>Welcome Guys</h1>
 
-  <form>
+  <%= form_with url: sign_in_path, method: :post do |form| %>
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <%= form.label :email, "Enter Email", class: "form-label" %>
+      <%= form.text_field :email, class: "form-control", required: true %>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <%= form.label :password, "Enter Password", class: "form-label" %>
+      <%= form.password_field :password, class: "form-control", required: true %>
     </div>
     <div class="mb-3">
       <%= link_to "Forgot your password?", password_reset_path %>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <div class="mb-3">
+      <%= form.submit "Sign In", class: "btn btn-outline-warning" %>
+    </div>
+  <% end %>
 
 </div>
