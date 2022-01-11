@@ -1,25 +1,26 @@
-<%= form_with model: user_article do |form| %>
+<%= form_with model: user_article, article: article do |form| %>
     <div class="mb-3">
-      <%= form.label :title, "Title", class: "form-label" %><br>
-      <%= form.text_field :title, class: "form-control", required: true %>
+      <%= form.label :title, "Title", class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div class="text-danger"><%= message %></div>
+      <% end %>
     </div>
 
     <div class="mb-3">
-      <%= form.label :description, "Description", class: "form-label" %><br>
-      <%= form.text_field :description, class: "form-control", required: true %>
+      <%= form.label :description, "Description", class: "form-label" %>
+      <%= form.text_field :description, class: "form-control" %>
+      <% article.errors.full_messages_for(:description).each do |message| %>
+        <div class="text-danger"><%= message %></div>
+      <% end %>
     </div>
 
     <div class="mb-3">
-      <%= form.label :public_flag, "Public Flag", class: "form-label" %>
-      <div class="form-check">
-        <%= form.label :public_flag, "Yes", class: "form-check-label" %>
-        <%= form.radio_button :public_flag, "true", class: "form-check-input" %>
-      </div>
-
-      <div class="form-check">
-        <%= form.label :public_flag, "No", class: "form-check-label" %>
-        <%= form.radio_button :public_flag, "false", class: "form-check-input" %>
-      </div>
+        <%= form.label :public_flag, "Choose Privacy Type", class: "form-label" %>
+        <%= form.select :public_flag, options_for_select([['Privacy type',""], ['Public', true], ['Private', false]]), {}, {class: "form-select"} %>
+        <% article.errors.full_messages_for(:public_flag).each do |message| %>
+          <div class="text-danger"><%= message %></div>
+        <% end %>
     </div>
 
     <div class="mb-3">

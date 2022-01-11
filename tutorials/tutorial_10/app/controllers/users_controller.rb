@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @article = @user.articles.build
   end
 
   def new
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
     if @is_user_create
       redirect_to users_path
     else
-      redirect_to new_user_path, notice: "User creation failed, validation error occurs!!"
+      render :new
     end
 
   end

@@ -42,7 +42,7 @@
 
   <%# create article %>
   <h2>Create an Article:</h2>
-  <%= render 'articles/article_form', user_article: [ @user, @user.articles.build ] %> 
+  <%= render 'articles/article_form', user_article: [ @user, @article ], article: @article %> 
 
   <%# show created articles %>
   <% unless @user.articles.empty? %>

@@ -4,7 +4,13 @@ class ArticlesController < ApplicationController
    def create
     @user = UserService.getUserByID(params[:user_id])
     @article = ArticleService.createArticle(@user, article_params)
-    redirect_to user_path(@user)
+
+    if @article.save
+      redirect_to user_path(@user)
+    else
+      render "users/show"
+    end
+    
   end
 
   def edit
