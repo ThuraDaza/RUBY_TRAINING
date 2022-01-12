@@ -5,7 +5,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    @user = UserService.findByEmail(params[:email])
+    @user = UserService.find_by_email(params[:email])
 
     if @user.present? 
       #send email
@@ -31,7 +31,7 @@ class PasswordResetsController < ApplicationController
     # check password confirmation same with password
     if password == confirm_password
       # update password 
-      if UserService.updatePassword(@user, password)
+      if UserService.update_password(@user, password)
         redirect_to root_path, notice: "Your password was reset successfully."
       else
         render :edit

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index 
-    @users = UserService.getAllUsers
+    @users = UserService.get_all_users
   end
 
   def show
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   # create a new user
   def create
     @user = User.new(user_params)
-    @is_user_create = UserService.createUser(@user)
+    @is_user_create = UserService.create_user(@user)
 
     # check new user is create or not
     if @is_user_create
@@ -29,12 +29,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = UserService.getUserByID(params[:id])
+    @user = UserService.get_user_by_id(params[:id])
   end
 
   def update
-    @user = UserService.getUserByID(params[:id])
-    @is_user_update = UserService.updateUser(@user, user_params)
+    @user = UserService.get_user_by_id(params[:id])
+    @is_user_update = UserService.update_user(@user, user_params)
 
     # update user's data
     if @is_user_update
@@ -46,8 +46,8 @@ class UsersController < ApplicationController
 
   # delete user
   def destroy
-    @user = UserService.getUserByID(params[:id])
-    UserService.destroyUser(@user)
+    @user = UserService.get_user_by_id(params[:id])
+    UserService.destroy_user(@user)
 
     redirect_to users_path
   end
