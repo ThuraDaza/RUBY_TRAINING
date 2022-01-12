@@ -1,12 +1,12 @@
 class UserService
   class << self
     # select all users
-    def getAllUsers
-      @users = UserRepository.getAllUsers
+    def get_all_users
+      @users = UserRepository.get_all_users
     end
 
     # create raw sql query
-    def createSqlString(name, email, user_type, phone, address, bday)
+    def create_sql_string(name, email, user_type, phone, address, bday)
       temp = []
       temp.push({key: "name", value: name}) if name && name != ""
       temp.push({key: "email", value: email}) if email && email != ""
@@ -30,38 +30,38 @@ class UserService
     end
 
     # search user
-    def searchUser(sql_str)
-      @users = UserRepository.searchUser(sql_str)
+    def search_user(sql_str)
+      @users = UserRepository.search_user(sql_str)
     end
 
     # create user
-    def createUser(user)
-      @is_user_create = UserRepository.createUser(user)
+    def create_user(user)
+      @is_user_create = UserRepository.create_user(user)
     end
 
     # select user using user id
-    def getUserByID(id)
-      @user = UserRepository.getUserByID(id)
+    def get_user_by_id(id)
+      @user = UserRepository.get_user_by_id(id)
     end
 
     # update user
-    def updateUser(user, user_params)
-      @is_user_update = UserRepository.updateUser(user, user_params)
+    def update_user(user, user_params)
+      @is_user_update = UserRepository.update_user(user, user_params)
     end
 
     # delete user
-    def destroyUser(user)
-      UserRepository.destroyUser(user)
+    def destroy_user(user)
+      UserRepository.destroy_user(user)
     end
     
     # find user using email
-    def findByEmail(email)
-      @user = UserRepository.findByEmail(email)
+    def find_by_email(email)
+      @user = UserRepository.find_by_email(email)
     end
 
     # update user password
-    def updatePassword(user, password)
-      @is_update_password = UserRepository.updatePassword(user, password)
+    def update_password(user, password)
+      @is_update_password = UserRepository.update_password(user, password)
     end
   end
 end

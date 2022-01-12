@@ -31,7 +31,7 @@ class PasswordResetsController < ApplicationController
     # check password confirmation same with password
     if password == confirm_password
       # update password 
-      if UserService.updatePassword(@user, password)
+      if UserService.update_password(@user, password)
         redirect_to root_path, notice: "Your password was reset successfully."
       else
         render :edit

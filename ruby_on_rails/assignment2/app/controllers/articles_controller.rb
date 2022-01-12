@@ -2,28 +2,28 @@ class ArticlesController < ApplicationController
 
    # create an article
    def create
-    @user = UserService.getUserByID(params[:user_id])
-    @article = ArticleService.createArticle(@user, article_params)
+    @user = UserService.get_user_by_id(params[:user_id])
+    @article = ArticleService.create_article(@user, article_params)
     redirect_to user_path(@user)
   end
 
   def edit
-    @user = UserService.getUserByID(params[:user_id])
-    @article = ArticleService.getArticleByID(@user, params[:id])
+    @user = UserService.get_user_by_id(params[:user_id])
+    @article = ArticleService.get_article_by_id(@user, params[:id])
   end
 
   def update
-    @user = UserService.getUserByID(params[:user_id])
-    @article = ArticleService.getArticleByID(@user, params[:id])
-    ArticleService.updateArticle(@article, article_params)
+    @user = UserService.get_user_by_id(params[:user_id])
+    @article = ArticleService.get_article_by_id(@user, params[:id])
+    ArticleService.update_article(@article, article_params)
 
     redirect_to user_path(@user)
   end
 
   def destroy
-    @user = UserService.getUserByID(params[:user_id])
-    @article = ArticleService.getArticleByID(@user, params[:id])
-    ArticleService.destroyArticle(@article)
+    @user = UserService.get_user_by_id(params[:user_id])
+    @article = ArticleService.get_article_by_id(@user, params[:id])
+    ArticleService.destroy_article(@article)
     redirect_to user_path(@user)
   end
 
