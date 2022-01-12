@@ -5,7 +5,7 @@ class LoginController < ApplicationController
   end
 
   def sign_in
-    @user = UserService.findByEmail(params[:email])
+    @user = UserService.find_by_email(params[:email])
 
     # check if authenticate or not
     if @user && @user.authenticate(params[:password])

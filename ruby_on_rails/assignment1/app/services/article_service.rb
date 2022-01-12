@@ -2,17 +2,17 @@ class ArticleService
   class << self
 
     # select all articles
-    def getAllArticles(user)
-      @articles = ArticleRepository.getAllArticles(user)
+    def get_all_articles(user)
+      @articles = ArticleRepository.get_all_articles(user)
     end
 
     # select article using article id
-    def getArticleByID(user, id)
-      @article = ArticleRepository.getArticleByID(user, id)
+    def get_article_by_id(user, id)
+      @article = ArticleRepository.get_article_by_id(user, id)
     end
 
     # import articles from csv file
-    def importArticle(user, file)
+    def import_article(user, file)
       @rowarraydisp = CSV.read(file.path).drop(1)
     
       @rowarraydisp.each do |article|
@@ -21,7 +21,7 @@ class ArticleService
       end
     end
 
-    def exportCsv(articles, fields = column_names, options = {})
+    def export_csv(articles, fields = column_names, options = {})
       CSV.generate(options) do |csv|
         csv << fields
         articles.each do |article|
@@ -31,18 +31,18 @@ class ArticleService
     end
     
     # create article
-    def createArticle(user, article)
-        @is_save_post = ArticleRepository.createArticle(user, article)
+    def create_article(user, article)
+        @is_save_post = ArticleRepository.create_article(user, article)
     end
 
     # update article
-    def updateArticle(article, article_params)
-        @is_update_article = ArticleRepository.updateArticle(article, article_params)
+    def update_article(article, article_params)
+        @is_update_article = ArticleRepository.update_article(article, article_params)
     end
 
     # delete article
-    def destroyArticle(article)
-        ArticleRepository.destroyArticle(article)
+    def destroy_article(article)
+        ArticleRepository.destroy_article(article)
     end
 
   end    
