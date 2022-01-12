@@ -2,13 +2,13 @@ class PostsController < ApplicationController
 
   def index
     # retreive all data from db
-    @members = PostService.getAllPosts
+    @members = PostService.get_all_posts
     @member = Post.new
   end
 
   def create
     @member = Post.new(member_params)
-    @is_post_create = PostService.createPost(@member)
+    @is_post_create = PostService.create_post(@member)
     
     # save new member's row in db
     if @is_post_create
@@ -26,8 +26,8 @@ class PostsController < ApplicationController
 
   # delete the specific member in db
   def destroy
-    @member = PostService.getPostByID(params[:id])
-    PostService.destroyPost(@member)
+    @member = PostService.get_post_by_id(params[:id])
+    PostService.destroy_post(@member)
 
     respond_to do |format|
       format.html { redirect_to posts_url }
