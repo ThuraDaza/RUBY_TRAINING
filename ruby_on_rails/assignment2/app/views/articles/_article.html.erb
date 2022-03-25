@@ -1,0 +1,13 @@
+<% unless article.id == nil %>
+  <tr>
+    <td><%= article.id %></td>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+    <td><%= article.public_flag %></td>
+    <td><%= link_to '<button type="button" class="btn btn-outline-warning">Edit</button>'.html_safe, 
+          edit_user_article_path(article.user, article) %></td>
+    <td><%= button_to "Delete", [article.user, article], 
+          method: :delete, data: { turbolinks: false, confirm: "Are you sure?" },
+          class: "btn btn-outline-danger" %></td>
+  </tr>
+<% end %>

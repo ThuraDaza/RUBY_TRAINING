@@ -1,0 +1,14 @@
+<div class="container w-300">
+  <h1>Forgot Password?</h1>
+
+  <%= form_with url: password_reset_path do |form| %>
+    <div class="mb-3">
+      <%= form.label :email, "Email", class: "form-label" %>
+      <%= form.text_field :email, class: "form-control", required: true %>
+    </div>
+    <div class="mb-3">
+      <%= form.submit "Reset Password", class: "btn btn-outline-warning" %>
+      <%= link_to "Cancel?", root_path, class: "btn btn-outline-info ml-50" %>
+    </div>
+  <% end %>
+</div>
