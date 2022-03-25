@@ -1,0 +1,29 @@
+<div class="container w-400">
+  <h1>Welcome to our page</h1>
+
+  <p>Create New User? <%= link_to "Create New", new_user_path %></p>
+  <%= button_to "Log Out", sign_out_path, class: "btn btn-outline-success" , method: :post  %>        
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <th scope="row"><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to '<button type="button" class="btn btn-outline-success">Details</button>'.html_safe, 
+          user_path(user) %></td>      
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+</div>
